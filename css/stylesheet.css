@@ -1,0 +1,663 @@
+@font-face {
+  font-family: Champagne;
+  src: url(Champagne-Limousines.ttf);
+}
+
+@keyframes hide{
+	0% {opacity: 1};
+	100% {opacity: 0};
+}
+
+@keyframes show{
+	0% {opacity: 0};
+	100% {opacity: 1;};
+}
+
+
+@font-face {
+  font-family: PV;
+  src: url(../fonts/Champagne-Limousines.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Thin.ttf);
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+  margin: 0,;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	font-family: poppins;
+	background: rgb(10, 10, 10);
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	text-align: center;
+}
+
+tr, a{
+	transition: 500ms;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a:visited{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+
+	z-index: 10;
+
+
+	background: rgb(10, 10, 10);
+}
+
+.nav{
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.nav-link{
+	width: 100px;
+	text-align: center;
+	margin-left: 3%;
+	color: #ffffff;
+}
+
+#container, #loft-site-mcatering, .mcatering, #flex-chef, #loft-site{
+	position: absolute;	
+}
+
+#container, #loft-site-mcatering{
+	top: 0;
+	left: 0;
+	
+}
+
+#container{
+	top: 5%;
+	width: 80%;
+
+	margin: 0 10%;
+
+	color: #ffffff
+}
+
+#loft-site-mcatering, #flex-chef{
+	width: 100%;
+}
+
+ #loft-site-mcatering{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100vh;
+
+
+}
+
+
+
+.mcatering{
+	top: -2%;
+	left: 0;
+	height: 5%;
+
+	font-family: Champagne;
+	font-size: 1.2em;
+
+	z-index: 0;
+}
+
+
+
+.item-1 {
+	left: 0;
+	color: /*#339900*/;
+}
+
+
+
+#flex-chef{
+	height: 75%;
+
+	z-index: 1;
+
+	background: url(../images/backgrounds/catering.jpg);
+	background-size: cover;
+	background-position: center;
+	border: solid 2px #ffffff;
+}
+
+.flex-chef-content{
+	display: flex;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(10, 10, 10, .8);
+}
+
+.chef-content{
+	align-self: center;
+}
+
+.flex-chef-text{
+	display: block;
+	width: 50%;
+
+	margin: 0 auto;
+	text-align: center;
+}
+
+.direct-link{
+	width: 170px;
+	height: 45px;
+
+	display: block;
+	margin: 3% auto;
+
+	background: #ffffff;
+	border-radius: 2px;
+
+	transition: 500ms;
+}
+
+.direct-link a{
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	padding: 10px;
+	color: rgb(10, 10, 10);
+}
+
+.direct-link:hover{
+	background-color: #339900;
+}
+
+.direct-link a:hover{
+	color: rgb(0, 0, 0);
+}
+
+
+#loft-site{
+	top: 100vh;
+	width: 100%;
+	margin: 0;
+}
+
+#loft-aboutme{
+	min-height: 700px;
+}
+
+.aboutme{
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+.item-one{
+	padding-top: 10%;
+}
+
+.chef{
+	width: 100%;
+}
+
+#catering-offer{
+	width: 100%;
+	padding-top: 10%;
+}
+
+.products{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	padding: 50px 0;
+	clear: both;
+
+}
+
+.product{
+	width: 300px;
+	height: 500px;
+	overflow: hidden;
+
+	margin: 2% 3%;
+	border: 2px solid #ffffff;
+	transition: 500ms;
+
+	clear: both;
+}
+
+.product:hover{
+	transform: scale(1.1);
+}
+
+.product-item-1{
+	background: url(../images/backgrounds/tlo1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.product-item-2{
+	background: url(../images/backgrounds/tlo2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.product-item-3{
+	background: url(../images/backgrounds/tlo3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.product-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(10, 10, 10, .8);
+
+	transition: 500ms;
+}
+
+.product-describe{
+	position: absolute;
+	top: 100%;
+	width: 90%;
+	
+
+	visibility: hidden;
+	text-align: center;
+	display: block;
+}
+
+.product-content:hover > .product-describe{
+	top: 50%;
+	visibility: visible;
+}
+
+.product-content > h1, .product-describe{
+	transition: 500ms;
+}
+
+.product-content:hover > h1{
+	transform: translateY(-200%);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#restaurant, .rest-bg::before {
+  background: url(../images/backgrounds/cegla.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  z-index: 1;
+
+}
+
+#restaurant{
+	display: block;
+
+	margin: 10% 0;
+	margin-bottom: 5%;
+	height: 750px;
+	width: 100%;
+
+	border: 2px solid #ffffff;
+
+	}
+
+.rest-bg{
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+
+	background: rgba(10, 10, 10, .95);
+}
+
+.rest-bg p{
+	width: 90%;
+	text-align: center;
+}
+
+.rest-bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+#contact{
+  width: 100%;
+  height: 1300px;
+  display: block;
+  margin-bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+ 
+ }
+
+
+
+
+#contact_form{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+   
+  width: 80%;
+  max-width: 1100px;
+  height: 1160px;
+
+  padding: 2%; 
+  margin: 0 auto;
+
+  overflow: hidden;
+  border-radius: 8px; 
+  font-size: 1em;
+  color: #ffffff;
+
+  z-index: 0;
+}
+
+#contact_form::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+
+   #contact_form input, #contact_form textarea, select{
+    width: 60%;
+
+    margin: 1% 0;
+
+    transition: 1s;
+  }
+
+
+
+  #contact_form input:focus, #contact_form textarea:focus{
+    background: #fff;
+  }
+
+
+  #contact_form input, textarea{
+    height: 4%;
+    background: none;
+    border: none;
+    background: #ffffff;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  select{
+    height: 3%;
+    font-size: 1.2em;
+    border: none;
+  }
+
+
+  #contact_form input[type=submit]{
+    width: 250px;
+    height: 45px;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    transition: 500ms;
+    text-align: center;
+  }
+
+  #contact_form input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #339900;
+    color: #000000;
+    box-shadow: 0 0 10px #333333;
+  }
+
+ 
+
+  #contact_form textarea{
+    height: 10%;
+    resize: none;
+  }
+
+  #contact_form input[type=checkbox]{
+    width: 5%;
+    height: 2.5%;
+    margin: 2.5% 47% 0;
+  }
+
+  .tak{
+    display: block;
+  }
+
+  .error{
+    text-align: center;
+    color: red;
+  }
+
+@media screen and (max-width: 1460px){
+.product{
+	width: 250px;
+	height: 400px;
+}
+
+.product-content:hover > h1{
+	transform: translateY(-250%);
+}
+
+.product-content:hover > .product-describe{
+	top: 35%;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 960px){
+.aboutme{
+	position: relative;
+	width: 100%;
+	
+	float: left;
+	margin-bottom: 5%;
+
+	text-align: justify;
+}
+
+
+}
+
+@media screen and (max-width: 660px){
+
+
+.flex-chef-text{
+	width: 80%;
+	margin-top: 15%;
+
+	text-align: justify;
+}
+
+.product{
+	margin: 8% 0;
+}
+
+#contact{
+	width: 100%;
+}
+
+#contact_form{
+	
+  width: 100%;		
+
+  padding: 0%; 	
+
+}
+
+#contact_form input, #contact_form textarea, select{
+    width: 100%;
+
+    margin: 1% 0;
+
+    transition: 1s;
+  }
+
+
+.tak{
+	text-align: justify;
+}
+
+
+}
+
+
+@media screen and (max-device-width: 660px){
+
+
+#container{
+	top: 0;
+	margin: 0 10%;
+}
+
+.direct-link{
+	margin-top: 10%;
+}
+
+.direct-link a{
+	padding-top: 13px;
+	text-align: center;
+	color: rgb(10, 10, 10);
+}
+
+}
+
+
+
+/* .nav-page-link > a{
+	width: 100%;
+	height: 100%;
+
+	display: block;
+	margin: 0;
+
+	color: #000;
+
+	text-align: center;
+	line-height: 40px;
+
+	border-radius: 3px;
+	box-shadow: 0 0 15px gray;
+} 
+
+@media screen and (max-width: 960px){
+ .item-2{
+ 	margin-left: 5%;
+ }
+}
+
+@media screen and (max-width: 760px){
+ .col h1{
+ font-size: 1.2em;
+ }
+}
+
+@media screen and (max-device-height: 460px){
+
+.col{
+	width: 200px;
+	min-height: 200px;
+	align-self: center;
+}
+
+.col h1{
+ 	font-size: 1.1em;
+ }
+
+
+.nav-page-link{
+	height: 30px;
+}
+
+.nav-page-link > a{
+	line-height: 30px;
+	font-size: .85rem;
+
+}
+
+}
+
+
+ @media screen and (max-device-width: 560px){
+	
+.col{
+	width: 250px;
+	min-height: 250px;
+}
